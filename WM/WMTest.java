@@ -2,6 +2,7 @@ package WM;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -15,8 +16,10 @@ public class WMTest {
 	
 	@BeforeClass
 	public void setUp(){
-		WebDriverManager.chromiumdriver().setup();
-		driver = new ChromeDriver();
+	//	WebDriverManager.chromiumdriver().setup();
+		WebDriverManager.firefoxdriver().setup();
+	//	driver = new ChromeDriver();
+		driver = new FirefoxDriver();
 	}
 	
 	@Test
